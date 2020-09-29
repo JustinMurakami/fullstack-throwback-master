@@ -23,18 +23,22 @@ We would expect a post ID to be the value of 'this.state.view.'
 ### Q4. What interactions with the server will be required in order to fully implement this component?
 
 <!-- Your answer here! -->
+In order to retrieve all the current posts' information, the client will need to submit a get request to the server to query the database and receive that data back.
 
 ### Q5. What information should be kept inside `this.state` in this component?
 
 <!-- Your answer here! -->
+The information retrieved for all posts and stored in the component's state should include each post's title, number of upvotes and number of comments (what is being rendered in the component), and each post's id.
 
 ### Q6. What props does this component receive from its parent component?
 
 <!-- Your answer here! -->
+It receives the changeView method as a prop from its parent component, index.jsx.
 
 ### Q7. What additional components might we create to help implement this component?
 
 <!-- Your answer here! -->
+We should create a list item component.  This will help implementation of the Posts component by allowing us to map and render each post's summary information to each list item, which will be children components of the Post component..
 
 ## `Post` Component
 
