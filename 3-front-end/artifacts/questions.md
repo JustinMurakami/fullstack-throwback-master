@@ -45,18 +45,23 @@ We should create a list item component.  This will help implementation of the Po
 ### Q8. What interactions with the server will be required in order to fully implement this component?
 
 <!-- Your answer here! -->
+We will need to retrieve all the information for the one post in question based on the id being passed from the view state of the app. This will require an API get request.  We are also asked to allow the user to increment the number of votes for the post, which will require a post request.  We are also asked to allow the user to add a comment to the post's information, which will require another post request, and the dynamically render a list of the post's comments, another get request for the post's updated information.
 
 ### Q9. What information should be kept inside `this.state` in this component?
 
 <!-- Your answer here! -->
+The full data for the post in question, in order to render it to the browser from the component's state.
 
 ### Q10. What props does this component receive from its parent component?
 
 <!-- Your answer here! -->
+This component will receive the id of the post that is to be displayed.
 
 ### Q11. What additional components might we create to help implement this component?
 
 <!-- Your answer here! -->
+We might create comment list item components to dynamically render the comments (mapping them from the post in state).
+
 
 ## `Create` Component
 
