@@ -7,10 +7,9 @@ export default class PostSummary extends React.Component {
 
   render() {
     return(
-      <li>
-        <h3>{this.props.post.title}</h3>
-        <p>Upvotes: {this.props.post.votes}</p>
-        <p>Comments: {this.props.post.comments.length}</p>
+      <li className="post-list-entry">
+        <div className="post-list-entry-title">{this.props.post.title}</div>
+        <span className="post-list-entry-stats">{this.props.post.votes} upvotes</span> <span className="post-list-entry-stats">{this.props.post.comments.length} comment</span>
       </li>
     )
   }
