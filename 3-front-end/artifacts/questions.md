@@ -38,7 +38,7 @@ It receives the changeView method as a prop from its parent component, index.jsx
 ### Q7. What additional components might we create to help implement this component?
 
 <!-- Your answer here! -->
-We should create a list item component.  This will help implementation of the Posts component by allowing us to map and render each post's summary information to each list item, which will be children components of the Post component..
+We should create a list item component.  This will help implementation of the Posts component by allowing us to map and render each post's summary information to each list item, which will be children components of the Post component.
 
 ## `Post` Component
 
