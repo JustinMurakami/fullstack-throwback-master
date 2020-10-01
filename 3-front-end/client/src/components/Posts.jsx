@@ -32,7 +32,7 @@ export default class Posts extends React.Component {
   render() {
     const PostSummaries = this.state.posts.map((post) => {
       return(
-        <PostSummary key={post._id} post={post} />
+        <PostSummary key={post._id} post={post} viewPost={this.props.viewPost}/>
       )
     })
     return (
