@@ -14,3 +14,5 @@ export default class PostSummary extends React.Component {
     )
   }
 }
+
+//Complete module 3, step 2
