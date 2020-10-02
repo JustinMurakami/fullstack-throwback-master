@@ -69,14 +69,19 @@ We might create comment list item components to dynamically render the comments 
 
 <!-- Your answer here! -->
 
+We will need to implement a post request in order to send a new post to the database and store it, and a get request in order to retrieve the information to appear in the Post component.
+
 ### Q13. What information should be kept inside `this.state` in this component?
 
 <!-- Your answer here! -->
+We will need to store the new post's title and body in state.
 
 ### Q14. What props does this component receive from its parent component?
 
 <!-- Your answer here! -->
+It receives the changeView method as a prop.
 
 ### Q15. What additional components might we create to help implement this component?
 
 <!-- Your answer here! -->
+None needed.

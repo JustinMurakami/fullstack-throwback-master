@@ -27,7 +27,6 @@ export default class Post extends React.Component {
       type: 'GET',
       dataType: 'json',
       success: (data) => {
-        console.log(data);
         this.setState({
           postInfo: data
         })
@@ -89,9 +88,10 @@ export default class Post extends React.Component {
   }
 
   render() {
-    const commentItems = this.state.postInfo.comments.map((comment) => {
+    const { comments } = this.state.postInfo;
+    const CommentItems = comments.map((comment, index) => {
       return(
-        <CommentItem comment={comment} />
+        <CommentItem key={index} comment={comment} />
       )
     })
     return (
@@ -100,13 +100,13 @@ export default class Post extends React.Component {
         <p>{this.state.postInfo.body}</p>
         <hr />
         <span className="post-stats" onClick={() => {this.handleClick()}}>{this.state.postInfo.votes} upvotes</span>
-        <span className="post-stats post-stats-comments">{this.state.postInfo.comments.length} comments</span>
+        <span className="post-stats post-stats-comments">{comments.length} comments</span>
         <form>
           <textarea className="comment-input" placeholder="Add your comment here!" onChange={(e) => this.handleChange(e)} ></textarea>
           <button className="comment-submit" type="submit" onClick={(e) => {this.handleSubmit(e)}}>Save comment</button>
         </form>
         <ul>
-          {commentItems}
+          {CommentItems}
         </ul>
       </div>
     )
