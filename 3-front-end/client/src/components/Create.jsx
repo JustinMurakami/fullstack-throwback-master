@@ -50,8 +50,6 @@ export default class Create extends React.Component {
     e.preventDefault();
     this.postNewPost()
       .then((data) => {
-        console.log('from in data');
-        console.log(data);
         this.props.viewPost(data._id);
       })
   }
